@@ -1,0 +1,19 @@
+# Python virtualenv
+lambda_ingestion/venv/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Lambda build artifact
+lambda_ingestion/lambda.zip
+
+# Terraform state & working dirs
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfvars
+
+# IDE-specific
+.vscode/
+.idea/
