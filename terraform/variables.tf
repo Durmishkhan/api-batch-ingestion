@@ -14,3 +14,9 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "dlq_name" {
+  description = "Name of the DLQ queue"
+  type        = string
+  default     = "open-meteo-dlq"
+}
