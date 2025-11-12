@@ -1,7 +1,7 @@
 import logging
 from api_client import fetch_data
 from schema_validator import validate_records
-from s3_writer import write_to_s3
+from s3_writer import write_hourly_records
 from metrics import emit_metric
 from utils import retry
 
@@ -11,7 +11,7 @@ def lambda_handler(event, context):
 
         valid_records = validate_records(records)
 
-        write_to_s3(valid_records)
+        write_hourly_records(valid_records)
         
         emit_metric(len(valid_records))
 
